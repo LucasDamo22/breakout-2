@@ -1,0 +1,564 @@
+
+Discarded input sections
+
+ .data          0x00000000        0x0 crt0.o
+ .bss           0x00000000        0x0 crt0.o
+ .text          0x00000000        0x0 interrupt.o
+ .data          0x00000000        0x0 interrupt.o
+ .bss           0x00000000        0x0 interrupt.o
+ .rodata.exception_handler.str1.4
+                0x00000000       0x2c interrupt.o
+ .text.exception_handler
+                0x00000000       0x40 interrupt.o
+ .data.dac_vector
+                0x00000000       0x10 interrupt.o
+ .data.adc_vector
+                0x00000000       0x10 interrupt.o
+ .data.i2c_vector
+                0x00000000       0x10 interrupt.o
+ .data.spi_vector
+                0x00000000       0x10 interrupt.o
+ .data.uart_vector
+                0x00000000       0x40 interrupt.o
+ .text          0x00000000        0x0 libc.o
+ .data          0x00000000        0x0 libc.o
+ .bss           0x00000000        0x0 libc.o
+ .text.delay_us
+                0x00000000      0x108 libc.o
+ .text.putchar  0x00000000       0x20 libc.o
+ .text.kbhit    0x00000000       0x10 libc.o
+ .text.getchar  0x00000000       0x20 libc.o
+ .text.strncpy  0x00000000       0x4c libc.o
+ .text.strncat  0x00000000       0x48 libc.o
+ .text.strcmp   0x00000000       0x2c libc.o
+ .text.strncmp  0x00000000       0x34 libc.o
+ .text.strstr   0x00000000       0x50 libc.o
+ .text.strchr   0x00000000       0x24 libc.o
+ .text.strpbrk  0x00000000       0x54 libc.o
+ .text.strsep   0x00000000       0x70 libc.o
+ .text.strtok   0x00000000       0x90 libc.o
+ .text.memcpy   0x00000000       0x24 libc.o
+ .text.memmove  0x00000000       0x4c libc.o
+ .text.memcmp   0x00000000       0x38 libc.o
+ .text.memset   0x00000000       0x20 libc.o
+ .text.strtol   0x00000000       0xf0 libc.o
+ .text.atoi     0x00000000       0xb8 libc.o
+ .text.atof     0x00000000      0x24c libc.o
+ .text.ftoa     0x00000000      0x1c8 libc.o
+ .text.itoa     0x00000000      0x1b0 libc.o
+ .text.puts     0x00000000       0x58 libc.o
+ .text.gets     0x00000000       0x4c libc.o
+ .text.getline  0x00000000       0x54 libc.o
+ .text.abs      0x00000000       0x10 libc.o
+ .text.random   0x00000000       0x5c libc.o
+ .text.srand    0x00000000        0xc libc.o
+ .rodata.hexdump.str1.4
+                0x00000000       0x13 libc.o
+ .text.hexdump  0x00000000      0x154 libc.o
+ .text.__mulsi3
+                0x00000000       0x34 libc.o
+ .text.__muldsi3
+                0x00000000       0xf8 libc.o
+ .text.__muldi3
+                0x00000000       0xb0 libc.o
+ .text.__udivmodsi4
+                0x00000000       0x64 libc.o
+ .text.__divsi3
+                0x00000000       0x78 libc.o
+ .text.__modsi3
+                0x00000000       0x6c libc.o
+ .text.__ashldi3
+                0x00000000       0x34 libc.o
+ .text.__ashrdi3
+                0x00000000       0x2c libc.o
+ .text.__lshrdi3
+                0x00000000       0x38 libc.o
+ .text.__udivmoddi4
+                0x00000000      0x174 libc.o
+ .text.__umoddi3
+                0x00000000       0xf4 libc.o
+ .text.__udivdi3
+                0x00000000      0x144 libc.o
+ .text.__moddi3
+                0x00000000      0x15c libc.o
+ .text.__divdi3
+                0x00000000      0x1c4 libc.o
+ .text.__addsf3
+                0x00000000      0x1fc libc.o
+ .text.__subsf3
+                0x00000000       0x28 libc.o
+ .text.__cmpsf2
+                0x00000000       0x44 libc.o
+ .text.__ltsf2  0x00000000       0x34 libc.o
+ .text.__lesf2  0x00000000       0x44 libc.o
+ .text.__gtsf2  0x00000000       0x44 libc.o
+ .text.__gesf2  0x00000000       0x34 libc.o
+ .text.__eqsf2  0x00000000        0xc libc.o
+ .text.__nesf2  0x00000000        0xc libc.o
+ .text.__mulsf3
+                0x00000000      0x134 libc.o
+ .text.__divsf3
+                0x00000000       0xc0 libc.o
+ .text.__negsf2
+                0x00000000       0x18 libc.o
+ .text.__fixsfsi
+                0x00000000       0x50 libc.o
+ .text.__fixunssfsi
+                0x00000000       0x50 libc.o
+ .text.__floatsisf
+                0x00000000       0x88 libc.o
+ .text.__floatunsisf
+                0x00000000       0x64 libc.o
+ .text.__floatsidf
+                0x00000000       0x78 libc.o
+ .text.__floatdidf
+                0x00000000       0xbc libc.o
+ .text.__negdf2
+                0x00000000       0x14 libc.o
+ .text.__extendsfdf2
+                0x00000000       0x44 libc.o
+ .text.__truncdfsf2
+                0x00000000       0xb8 libc.o
+ .text.__cmpdf2
+                0x00000000       0x44 libc.o
+ .text.__fixdfsi
+                0x00000000       0x84 libc.o
+ .text.__fixdfdi
+                0x00000000       0xa8 libc.o
+ .text.__fixunsdfsi
+                0x00000000       0x58 libc.o
+ .text.__fixunsdfdi
+                0x00000000       0x7c libc.o
+ .text.__adddf3
+                0x00000000      0x568 libc.o
+ .text.__subdf3
+                0x00000000       0x68 libc.o
+ .text.__muldf3
+                0x00000000      0x22c libc.o
+ .text.__divdf3
+                0x00000000      0x1e8 libc.o
+ .text.__gtdf2  0x00000000       0xac libc.o
+ .text.__gedf2  0x00000000       0xa8 libc.o
+ .text.__ltdf2  0x00000000       0xa8 libc.o
+ .text.__ledf2  0x00000000       0xac libc.o
+ .text.__eqdf2  0x00000000       0x14 libc.o
+ .text.__nedf2  0x00000000       0x14 libc.o
+ .sbss.last.0   0x00000000        0x4 libc.o
+ .sdata.rand1   0x00000000        0x4 libc.o
+ .srodata.cst4  0x00000000       0x14 libc.o
+ .srodata.cst8  0x00000000        0x8 libc.o
+ .text          0x00000000        0x0 lucas.o
+ .data          0x00000000        0x0 lucas.o
+ .bss           0x00000000        0x0 lucas.o
+ .text.int_to_string
+                0x00000000       0x54 lucas.o
+ .text.init_input
+                0x00000000       0x1c lucas.o
+ .text.display_rects
+                0x00000000       0x1c lucas.o
+ .text.init_ball
+                0x00000000       0x1c lucas.o
+ .text.display_ball
+                0x00000000       0x20 lucas.o
+ .text.erase_ball
+                0x00000000       0x1c lucas.o
+ .text.erase_rect
+                0x00000000       0x1c lucas.o
+ .text          0x00000000        0x0 malloc.o
+ .data          0x00000000        0x0 malloc.o
+ .bss           0x00000000        0x0 malloc.o
+ .text          0x00000000        0x0 math.o
+ .data          0x00000000        0x0 math.o
+ .bss           0x00000000        0x0 math.o
+ .text.xatan    0x00000000      0x154 math.o
+ .text.satan    0x00000000      0x100 math.o
+ .text.fabs     0x00000000       0x3c math.o
+ .text.frexp    0x00000000       0x8c math.o
+ .text.ldexp    0x00000000      0x1a8 math.o
+ .text.modf     0x00000000       0xb8 math.o
+ .text.sinus    0x00000000      0x26c math.o
+ .text.floor    0x00000000       0xa4 math.o
+ .text.exp.part.0
+                0x00000000      0x174 math.o
+ .text.ceil     0x00000000       0xc0 math.o
+ .text.sqrt     0x00000000      0x278 math.o
+ .text.exp      0x00000000       0xac math.o
+ .text.log      0x00000000      0x248 math.o
+ .text.log10    0x00000000       0x2c math.o
+ .text.pow      0x00000000      0x1e8 math.o
+ .text.cos      0x00000000       0x44 math.o
+ .text.sin      0x00000000        0xc math.o
+ .text.tan      0x00000000      0x2f4 math.o
+ .text.atan     0x00000000       0x64 math.o
+ .text.atan2    0x00000000      0x184 math.o
+ .text.asin     0x00000000      0x1c8 math.o
+ .text.acos     0x00000000       0x88 math.o
+ .text.sinh     0x00000000      0x2b8 math.o
+ .text.cosh     0x00000000      0x14c math.o
+ .text.tanh     0x00000000       0xb0 math.o
+ .srodata.cst4  0x00000000      0x124 math.o
+ .srodata.cst8  0x00000000       0x18 math.o
+ .comment       0x00000000       0x13 math.o
+ .note.GNU-stack
+                0x00000000        0x0 math.o
+ .riscv.attributes
+                0x00000000       0x1c math.o
+ .text          0x00000000        0x0 vga_drv.o
+ .data          0x00000000        0x0 vga_drv.o
+ .bss           0x00000000        0x0 vga_drv.o
+ .text.display_getpixel
+                0x00000000       0x74 vga_drv.o
+ .text.display_line
+                0x00000000      0x124 vga_drv.o
+ .text.display_hline
+                0x00000000       0x68 vga_drv.o
+ .text.display_vline
+                0x00000000       0x68 vga_drv.o
+ .text.display_rectangle
+                0x00000000      0x168 vga_drv.o
+ .text.display_circle
+                0x00000000      0x188 vga_drv.o
+ .text.display_fcircle
+                0x00000000      0x1a8 vga_drv.o
+ .text.display_triangle
+                0x00000000       0x80 vga_drv.o
+ .text.display_ftriangle
+                0x00000000      0x48c vga_drv.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x40000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0x00002000                        _stack_size = 0x2000
+                0x40008000                        _stack = _stack_start
+                0x40008000                        _stack_start = (ORIGIN (RAM) + LENGTH (RAM))
+                0x40006000                        _stack_end = (_stack_start - _stack_size)
+                0x400024d4                        _heap_start = _ebss
+                0x40006000                        _heap_end = _stack_end
+                0x00003b2c                        _heap_size = (_stack_end - _ebss)
+                0x00000000                        . = 0x0
+
+.text
+ *(.text.init)
+
+.text           0x40000000     0x1ab8
+                0x40000000                        _text = .
+ *(.text)
+ .text          0x40000000      0x1f8 crt0.o
+                0x40000000                _entry
+                0x400000e0                _bootsignature
+                0x40000100                _isr
+                0x40000198                _interrupt_set
+                0x400001b0                setjmp
+                0x400001d0                longjmp
+                0x400001f0                syscall
+ *(.text.*)
+ .text.dummy_handler
+                0x400001f8        0xc interrupt.o
+                0x400001f8                timer0a_handler
+                0x400001f8                irq4_handler
+                0x400001f8                spi0_handler
+                0x400001f8                uart7tx_handler
+                0x400001f8                uart6tx_handler
+                0x400001f8                irq2_handler
+                0x400001f8                adc2_handler
+                0x400001f8                timer4ocr_handler
+                0x400001f8                irq7_handler
+                0x400001f8                timer1ovf_handler
+                0x400001f8                timer3ocr_handler
+                0x400001f8                timer7ctc_handler
+                0x400001f8                uart7rx_handler
+                0x400001f8                uart4tx_handler
+                0x400001f8                timer3ovf_handler
+                0x400001f8                uart2rx_handler
+                0x400001f8                timer2ovf_handler
+                0x400001f8                porta_handler
+                0x400001f8                uart3rx_handler
+                0x400001f8                portd_handler
+                0x400001f8                uart2tx_handler
+                0x400001f8                uart3tx_handler
+                0x400001f8                portc_handler
+                0x400001f8                uart0rx_handler
+                0x400001f8                timer5ovf_handler
+                0x400001f8                timer7ovf_handler
+                0x400001f8                dummy_handler
+                0x400001f8                irq3_handler
+                0x400001f8                adc3_handler
+                0x400001f8                timer6ctc_handler
+                0x400001f8                irq1_handler
+                0x400001f8                adc1_handler
+                0x400001f8                i2c1_handler
+                0x400001f8                spi2_handler
+                0x400001f8                irq6_handler
+                0x400001f8                timer4ctc_handler
+                0x400001f8                dac2_handler
+                0x400001f8                timer5ctc_handler
+                0x400001f8                uart0tx_handler
+                0x400001f8                timer4ovf_handler
+                0x400001f8                portb_handler
+                0x400001f8                dac0_handler
+                0x400001f8                uart5tx_handler
+                0x400001f8                timer0b_handler
+                0x400001f8                spi1_handler
+                0x400001f8                uart1tx_handler
+                0x400001f8                timer6ovf_handler
+                0x400001f8                i2c0_handler
+                0x400001f8                spi3_handler
+                0x400001f8                dac1_handler
+                0x400001f8                uart1rx_handler
+                0x400001f8                timer6ocr_handler
+                0x400001f8                uart6rx_handler
+                0x400001f8                uart5rx_handler
+                0x400001f8                timer2ocr_handler
+                0x400001f8                timer2ctc_handler
+                0x400001f8                timer7ocr_handler
+                0x400001f8                timer5ocr_handler
+                0x400001f8                adc0_handler
+                0x400001f8                timer3ctc_handler
+                0x400001f8                timer1ctc_handler
+                0x400001f8                i2c2_handler
+                0x400001f8                dac3_handler
+                0x400001f8                i2c3_handler
+                0x400001f8                timer1ocr_handler
+                0x400001f8                uart4rx_handler
+                0x400001f8                irq5_handler
+ .text.irq0_handler
+                0x40000204      0x274 interrupt.o
+                0x40000204                irq0_handler
+ .text.irq_enable
+                0x40000478       0x38 interrupt.o
+                0x40000478                irq_enable
+ .text.irq_handler
+                0x400004b0       0x6c interrupt.o
+                0x400004b0                irq_handler
+ .text.vsprintf.isra.0
+                0x4000051c      0x600 libc.o
+ .text.delay_ms
+                0x40000b1c      0x10c libc.o
+                0x40000b1c                delay_ms
+ .text.strcpy   0x40000c28       0x1c libc.o
+                0x40000c28                strcpy
+ .text.strcat   0x40000c44       0x4c libc.o
+                0x40000c44                strcat
+ .text.strlen   0x40000c90       0x28 libc.o
+                0x40000c90                strlen
+ .text.printf   0x40000cb8       0x44 libc.o
+                0x40000cb8                printf
+ .text.sprintf  0x40000cfc       0x40 libc.o
+                0x40000cfc                sprintf
+ .text.__udivsi3
+                0x40000d3c       0x58 libc.o
+                0x40000d3c                __udivsi3
+ .text.__umodsi3
+                0x40000d94       0x4c libc.o
+                0x40000d94                __umodsi3
+ .text.concatenate_str
+                0x40000de0       0x6c lucas.o
+                0x40000de0                concatenate_str
+ .text.display_points
+                0x40000e4c       0xa4 lucas.o
+                0x40000e4c                display_points
+ .text.get_input
+                0x40000ef0      0x150 lucas.o
+                0x40000ef0                get_input
+ .text.create_blocks
+                0x40001040      0x124 lucas.o
+                0x40001040                create_blocks
+ .text.move_ball
+                0x40001164      0x178 lucas.o
+                0x40001164                move_ball
+ .text.collison_detector
+                0x400012dc      0x1c0 lucas.o
+                0x400012dc                collison_detector
+ .text.init_paddle
+                0x4000149c       0x2c lucas.o
+                0x4000149c                init_paddle
+ .text.startup.main
+                0x400014c8      0x13c lucas.o
+                0x400014c8                main
+ .text.free     0x40001604       0x20 malloc.o
+                0x40001604                free
+ .text.malloc   0x40001624       0xb0 malloc.o
+                0x40001624                malloc
+ .text.heap_init
+                0x400016d4       0x38 malloc.o
+                0x400016d4                heap_init
+ .text.display_pixel
+                0x4000170c       0xbc vga_drv.o
+                0x4000170c                display_pixel
+ .text.display_frectangle
+                0x400017c8       0xa4 vga_drv.o
+                0x400017c8                display_frectangle
+ .text.display_background
+                0x4000186c       0x6c vga_drv.o
+                0x4000186c                display_background
+ .text.display_char
+                0x400018d8      0x148 vga_drv.o
+                0x400018d8                display_char
+ .text.display_print
+                0x40001a20       0x98 vga_drv.o
+                0x40001a20                display_print
+                0x40001ab8                        _etext = .
+
+.rela.dyn       0x40001ab8        0x0
+ .rela.text     0x40001ab8        0x0 crt0.o
+ .rela.data.timer_vector
+                0x40001ab8        0x0 crt0.o
+ .rela.data.gpio_vector
+                0x40001ab8        0x0 crt0.o
+ .rela.data.irq_vector
+                0x40001ab8        0x0 crt0.o
+ .rela.text.startup.main
+                0x40001ab8        0x0 crt0.o
+
+.data           0x40001ab8      0xa08
+                0x40001ab8                        _rodata = .
+ *(.rdata)
+ *(.rodata)
+ *(.rodata.*)
+ .rodata.dummy_handler.str1.4
+                0x40001ab8       0x65 interrupt.o
+                                  0x5 (size before relaxing)
+ .rodata.irq0_handler.str1.4
+                0x40001b1d       0x25 interrupt.o
+ *fill*         0x40001b1d        0x3 
+ .rodata.irq0_handler
+                0x40001b20       0x84 interrupt.o
+ .rodata.vsprintf.isra.0.str1.4
+                0x40001ba4       0x19 libc.o
+ .rodata.vsprintf.isra.0
+                0x40001ba4       0x84 libc.o
+ .rodata.int_to_string.str1.4
+                0x40001c28        0x3 lucas.o
+ .rodata.display_points.str1.4
+                0x40001c28        0xc lucas.o
+ .rodata.main.str1.4
+                0x40001c28        0x9 lucas.o
+ .rodata.ibm_8x8
+                0x40001c28      0x800 vga_drv.o
+                0x40001c28                ibm_8x8
+                0x40002428                        _erodata = .
+                0x40002428                        _data = .
+ *(.data)
+ *(.data.*)
+ .data.timer_vector
+                0x40002428       0x5c interrupt.o
+                0x40002428                timer_vector
+ .data.gpio_vector
+                0x40002484       0x10 interrupt.o
+                0x40002484                gpio_vector
+ .data.irq_vector
+                0x40002494       0x20 interrupt.o
+                0x40002494                irq_vector
+                0x40002cb4                        _gp = (. + 0x800)
+ *(.sdata)
+ *(.sdata.*)
+ .sdata.point_coef
+                0x400024b4        0x2 lucas.o
+                0x400024b4                point_coef
+ .sdata.pad_speed
+                0x400024b6        0x2 lucas.o
+                0x400024b6                pad_speed
+ .sdata.speed   0x400024b8        0x2 lucas.o
+                0x400024b8                speed
+ .sdata.ball_color
+                0x400024ba        0x2 lucas.o
+                0x400024ba                ball_color
+                0x400024c0                        . = ALIGN (0x10)
+ *fill*         0x400024bc        0x4 
+                0x400024c0                        _edata = .
+
+.bss            0x400024c0       0x14
+                0x400024c0                        . = ALIGN (0x4)
+                0x400024c0                        _sbss = .
+ *(.sbss)
+ *(.sbss.*)
+ .sbss.right    0x400024c0        0x1 lucas.o
+                0x400024c0                right
+ .sbss.left     0x400024c1        0x1 lucas.o
+                0x400024c1                left
+ .sbss.down     0x400024c2        0x1 lucas.o
+                0x400024c2                down
+ .sbss.up       0x400024c3        0x1 lucas.o
+                0x400024c3                up
+ .sbss.points   0x400024c4        0x2 lucas.o
+                0x400024c4                points
+ .sbss.deadBlocks
+                0x400024c6        0x2 lucas.o
+                0x400024c6                deadBlocks
+ .sbss.blockCount
+                0x400024c8        0x2 lucas.o
+                0x400024c8                blockCount
+ *fill*         0x400024ca        0x2 
+ .sbss.last_free
+                0x400024cc        0x4 malloc.o
+ .sbss.first_free
+                0x400024d0        0x4 malloc.o
+ *(.bss)
+ *(.bss.*)
+                0x400024d4                        . = ALIGN (0x4)
+                0x400024d4                        _ebss = .
+                0x400024d4                        _end = .
+
+.heap           0x400024d4     0x3b2c
+                0x400024d4                        . = ALIGN (0x4)
+                0x400024d4                        _heap_start = .
+                0x40006000                        . = (. + _heap_size)
+ *fill*         0x400024d4     0x3b2c 
+                0x40006000                        . = ALIGN (0x4)
+
+.stack          0x40006000     0x2000
+                0x40006000                        . = ALIGN (0x4)
+                0x40006000                        _stack_end = .
+                0x40008000                        . = (. + _stack_size)
+ *fill*         0x40006000     0x2000 
+                0x40008000                        _stack_start = .
+                0x40008000                        . = ALIGN (0x4)
+LOAD crt0.o
+LOAD interrupt.o
+LOAD libc.o
+LOAD lucas.o
+LOAD malloc.o
+LOAD math.o
+LOAD vga_drv.o
+OUTPUT(test.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x1c
+ .riscv.attributes
+                0x00000000       0x1a crt0.o
+ .riscv.attributes
+                0x0000001a       0x1c interrupt.o
+ .riscv.attributes
+                0x00000036       0x1c libc.o
+ .riscv.attributes
+                0x00000052       0x1c lucas.o
+ .riscv.attributes
+                0x0000006e       0x1c malloc.o
+ .riscv.attributes
+                0x0000008a       0x1c vga_drv.o
+
+.comment        0x00000000       0x12
+ .comment       0x00000000       0x12 interrupt.o
+                                 0x13 (size before relaxing)
+ .comment       0x00000012       0x13 libc.o
+ .comment       0x00000012       0x13 lucas.o
+ .comment       0x00000012       0x13 malloc.o
+ .comment       0x00000012       0x13 vga_drv.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 interrupt.o
+ .note.GNU-stack
+                0x00000000        0x0 libc.o
+ .note.GNU-stack
+                0x00000000        0x0 lucas.o
+ .note.GNU-stack
+                0x00000000        0x0 malloc.o
+ .note.GNU-stack
+                0x00000000        0x0 vga_drv.o
