@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Jul  2 16:38:31 2024
+# Process ID: 4040686
+# Current directory: /home/lucas.damo/Documents/const-sistemas-digitais/hf-risc-vga/hf-risc-vga.runs/impl_1
+# Command line: vivado -log hfrisc_soc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hfrisc_soc.tcl -notrace
+# Log file: /home/lucas.damo/Documents/const-sistemas-digitais/hf-risc-vga/hf-risc-vga.runs/impl_1/hfrisc_soc.vdi
+# Journal file: /home/lucas.damo/Documents/const-sistemas-digitais/hf-risc-vga/hf-risc-vga.runs/impl_1/vivado.jou
+# Running On: gaphs22.portoalegre.pucrsnet.br, OS: Linux, CPU Frequency: 4413.349 MHz, CPU Physical cores: 24, Host memory: 67106 MB
+#-----------------------------------------------------------
+source hfrisc_soc.tcl -notrace

@@ -1,0 +1,126 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Tue Jul  2 16:38:50 2024
+| Host         : gaphs22.portoalegre.pucrsnet.br running 64-bit Rocky Linux release 8.10 (Green Obsidian)
+| Command      : report_control_sets -verbose -file hfrisc_soc_control_sets_placed.rpt
+| Design       : hfrisc_soc
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    48 |
+|    Minimum number of control sets                        |    48 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    98 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    48 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     3 |
+| >= 16              |    21 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |             210 |           91 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             587 |          219 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+-----------------------------------------------------------+------------------+------------------+----------------+--------------+
+|   Clock Signal   |                       Enable Signal                       | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+-----------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_i_IBUF_BUFG |                                                           |                  |                1 |              1 |         1.00 |
+|  clk_i_IBUF_BUFG |                                                           | clock_i_2_n_0    |                1 |              1 |         1.00 |
+|  clock_BUFG      |                                                           | clock_i_2_n_0    |                1 |              2 |         2.00 |
+|  clk_i_IBUF_BUFG |                                                           | reset            |                1 |              2 |         2.00 |
+|  clock_BUFG      | processor/core/register_bank/alu_op_ctl_r_reg[3]_3[0]     | reset            |                1 |              4 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/data_access_s_dly_reg_11[0]  | reset            |                1 |              4 |         4.00 |
+|  clock_BUFG      | peripherals/uart0/bits_read_reg[3]_i_1_n_0                | reset            |                1 |              4 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/uart0_divisor[15]_i_3_1[0]   | reset            |                1 |              4 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[16][0]                | reset            |                1 |              4 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[16]_0[0]              | reset            |                1 |              5 |         5.00 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[24][0]                | reset            |                1 |              5 |         5.00 |
+|  clock_BUFG      | processor/core/register_bank/alu_op_ctl_r_reg[3]_9        | reset            |                2 |              7 |         3.50 |
+|  clock_BUFG      | peripherals/uart0/data_save_reg[7]_i_1_n_0                | reset            |                2 |              8 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/alu_op_ctl_r_reg[3]_4[0]     | reset            |                2 |              8 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/alu_op_ctl_r_reg[3]_7[0]     | reset            |                1 |              8 |         8.00 |
+|  clock_BUFG      | processor/core/register_bank/data_access_s_dly_reg_10[0]  | reset            |                7 |              8 |         1.14 |
+|  clock_BUFG      | peripherals/uart0/data_read_reg_0                         | reset            |                2 |              8 |         4.00 |
+|  clock_BUFG      | peripherals/uart0/read_value_reg_reg[7]_i_1_n_0           | reset            |                3 |              8 |         2.67 |
+|  clock_BUFG      | processor/core/register_bank/uart0_data_write[7]_i_2_0[0] | reset            |                2 |              8 |         4.00 |
+|  clk_i_IBUF_BUFG | vga_core/vga/freq_div/E[0]                                | reset            |                3 |             10 |         3.33 |
+|  clk_i_IBUF_BUFG | vga_core/vga/vsync_gen/count[9]_i_1__0_n_0                | reset            |                4 |             10 |         2.50 |
+|  clock_BUFG      | peripherals/uart0/delay_read_reg[0]_i_1_n_0               | reset            |                3 |             12 |         4.00 |
+|  clock_BUFG      | peripherals/uart0/delay_write_reg[11]_i_1_n_0             | reset            |                3 |             12 |         4.00 |
+|  clock_BUFG      | peripherals/uart0/data_write_reg_1                        | reset            |                4 |             13 |         3.25 |
+|  vga/clk_div     | vga_core/vga/vsync_gen/count_reg[8]_2                     | reset            |                4 |             14 |         3.50 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[23][0]                | reset            |                4 |             15 |         3.75 |
+|  clock_BUFG      | processor/core/register_bank/data_access_s_dly_reg_17[0]  | reset            |                4 |             15 |         3.75 |
+|  clock_BUFG      | processor/core/register_bank/E[0]                         | reset            |                7 |             16 |         2.29 |
+|  clock_BUFG      | processor/core/register_bank/uart0_divisor[15]_i_5_1[0]   | reset            |                8 |             16 |         2.00 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[16]_1[0]              | reset            |                7 |             16 |         2.29 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[16]_2[0]              | reset            |                5 |             16 |         3.20 |
+|  clock_BUFG      | processor/core/register_bank/pc_reg[26][0]                | reset            |                4 |             16 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/paddr                        | reset            |                5 |             16 |         3.20 |
+|  clock_BUFG      | processor/core/register_bank/pbddr                        | reset            |                6 |             16 |         2.67 |
+|  clock_BUFG      | processor/core/register_bank/timer1_set_reg[0]            | reset            |                5 |             16 |         3.20 |
+|  clock_BUFG      | processor/core/register_bank/data_access_s_dly_reg_19[0]  | reset            |                8 |             16 |         2.00 |
+|  clock_BUFG      | processor/core/register_bank/data_access_s_dly_reg_18[0]  | reset            |               10 |             16 |         1.60 |
+|  clock_BUFG      | processor/core/register_bank/timer1_ocr[15]_i_3_0[0]      | reset            |                5 |             16 |         3.20 |
+|  clock_BUFG      | processor/core/register_bank/uart0_divisor[15]_i_5_0[0]   | reset            |               11 |             17 |         1.55 |
+|  vga/clk_div     |                                                           | reset            |                5 |             20 |         4.00 |
+|  clock_BUFG      | processor/core/register_bank/alu_op_ctl_r_reg[3]_6[0]     | reset            |                6 |             24 |         4.00 |
+|  clock_BUFG      | processor/core/branch_ctl_r_reg[2]_0[0]                   | reset            |               10 |             32 |         3.20 |
+|  clock_BUFG      | processor/core/register_bank/data_access_s_dly_reg_15     | reset            |               21 |             32 |         1.52 |
+|  clock_BUFG      | processor/core/register_bank/alu_op_ctl_r_reg[3]_5[0]     | reset            |               11 |             32 |         2.91 |
+|  clock_BUFG      | processor/core/register_bank/uart0_divisor[15]_i_3_0[0]   | reset            |               16 |             32 |         2.00 |
+|  clock_BUFG      | processor/core/rd_r0                                      | reset            |               17 |             48 |         2.82 |
+|  clock_BUFG      | processor/core/register_bank/p_0_in__1                    |                  |               11 |             88 |         8.00 |
+|  clock_BUFG      |                                                           | reset            |               83 |            185 |         2.23 |
++------------------+-----------------------------------------------------------+------------------+------------------+----------------+--------------+
+
+
