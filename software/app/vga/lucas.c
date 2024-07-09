@@ -7,13 +7,13 @@
 #define PAD_HEIGHT 6
 #define MAX_SPEED 10
 
-uint16_t ball_color = WHITE;
-uint16_t blockCount = 0;
-uint16_t deadBlocks = 0;
-uint16_t speed = 24;
-uint16_t pad_speed = 2;
-uint16_t points = 0;
-uint16_t point_coef = 1;
+int16_t ball_color = WHITE;
+int16_t blockCount = 0;
+int16_t deadBlocks = 0;
+int16_t speed = 24;
+int16_t pad_speed = 2;
+int16_t points = 0;
+int16_t point_coef = 1;
 
 volatile uint8_t up    = 0;
 volatile uint8_t down  = 0;
@@ -21,22 +21,22 @@ volatile uint8_t left  = 0;
 volatile uint8_t right = 0;
 
 struct rectangle{
-    uint16_t x0, y0, color;
+    int16_t x0, y0, color;
     uint8_t alive;
 };
 
 struct ball{
-    uint16_t x0, y0;
-    uint16_t old_x0, old_y0;
+    int16_t x0, y0;
+    int16_t old_x0, old_y0;
 };
 
 struct paddle
 {
-    uint16_t x0, y0;
-    uint16_t old_x0, old_y0;
+    int16_t x0, y0;
+    int16_t old_x0, old_y0;
 };
 
-char* int_to_string(uint16_t points){
+char* int_to_string(int16_t points){
     char *str = malloc(7*sizeof(char));
     if(str == NULL){
         return NULL;
