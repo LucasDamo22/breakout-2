@@ -5,12 +5,14 @@
 #define RECT_HEIGHT 8
 #define PAD_WIDTH 26
 #define PAD_HEIGHT 6
-#define MAX_SPEED 10
+#define MAX_SPEED 8
 
 int16_t ball_color = WHITE;
 int16_t blockCount = 0;
 int16_t deadBlocks = 0;
 int16_t speed = 24;
+int16_t xspeed = 24;
+int16_t yspeed = 24;
 int16_t pad_speed = 2;
 int16_t points = 0;
 int16_t point_coef = 1;
@@ -65,12 +67,12 @@ void display_points(){
     char *points_str = int_to_string(points);
     char *points_header = "Points:";
     char *printable = concatenate_str(points_header,points_str);
-    printf("%s\n", printable);
+    // printf("%s\n", printable);
     display_frectangle(260,210,40,8,BLACK);
     display_print(printable,200,210,1,WHITE);
-     free(points_str);
+    free(points_str);
     // free(points_header);
-    // free(printable);
+    free(printable);
 }
 
 
@@ -92,13 +94,10 @@ void get_input(struct paddle *ppad)
         
             ppad->old_x0 = ppad->x0;
             ppad->x0 -= pad_speed;
-            if(ppad->x0 > VGA_WIDTH-1){
+            if(ppad->x0 < 0){
                 ppad->x0 = 0;
                 ppad->old_x0 = ppad->x0 + pad_speed;
             }
-        
-        
-        
         
         display_frectangle(ppad->old_x0 + PAD_WIDTH, ppad->y0,pad_speed,PAD_HEIGHT,BLACK);
         display_frectangle(ppad->x0, ppad->y0,pad_speed,PAD_HEIGHT,WHITE);
@@ -129,8 +128,6 @@ void display_rects(struct rectangle *rect ){
 
 
 struct rectangle** create_blocks(){
-    
-    
     for(int i = 0; i < (VGA_WIDTH - RECT_WIDTH); i += (RECT_WIDTH + 1)) {
         for(int j = 0; j < (VGA_HEIGHT / 3) - RECT_HEIGHT; j += (RECT_HEIGHT + 1)) {
             blockCount++;
@@ -182,7 +179,7 @@ struct rectangle** create_blocks(){
 
 void init_ball(struct ball *ball){
     ball->x0 = 150;
-    ball->y0 = 200;
+    ball->y0 = 50;
     ball->old_x0 = ball->x0;
     ball->old_y0 = ball->y0;
 }
@@ -215,19 +212,19 @@ void move_ball(struct ball *ball){
     if(down){
         ball->y0++;
     }
-    if(299 == ball->x0){
+    if(299 <= ball->x0){
             right = !right;
             left  = !left;
         }
-    if(0 == ball->y0){
+    if(0 >= ball->y0){
             up = !up;
             down = !down;
     }
-    if(0 == ball->x0){
+    if(0 >= ball->x0){
             right = !right;
             left  = !left;
     }
-    if(217 == ball->y0){
+    if(217 <= ball->y0){
             up = !up;
             down = !down;
     }
@@ -293,7 +290,7 @@ void collison_detector(struct ball *ball,struct rectangle **blocks, struct paddl
             }
         }
     }
-    if(((ppad->x0 <= ball->x0) && (ball->x0 <= ppad->x0  + PAD_WIDTH)) && ((ppad->y0 <= ball->y0)&&(ball->y0 <= ppad->y0 + PAD_HEIGHT))){
+    if(((ppad->x0 <= ball->x0) && (ball->x0 <= ppad->x0  + PAD_WIDTH)) && ((ppad->y0 <= ball->y0+1)&&(ball->y0 <= ppad->y0 + PAD_HEIGHT))){
         if((ball->x0 == ppad->x0) || (ball->x0 == ppad->x0 + PAD_WIDTH)){
             left = !left;
             right = !right;
@@ -307,6 +304,85 @@ void collison_detector(struct ball *ball,struct rectangle **blocks, struct paddl
         //printf("paddle hit!\n");
     }
     move_ball(ball);
+}
+void new_collision(struct ball *ball, struct rectangle **blocks, struct paddle *ppad){
+
+    // only possible collision areas
+    move_ball(ball);
+    if((ball->y0 < VGA_HEIGHT/3+10)){ 
+        for(int i = 0; i < blockCount; i++){
+            // checking if the block still in the game
+            if(blocks[i]->alive > 1){
+                // checking limits
+                if(((ball->x0 + 1  >= blocks[i]->x0) && (ball->x0 -1 <= blocks[i]->x0 + RECT_WIDTH)) && ((ball->y0 + 1 >= blocks[i]->y0) && (ball->y0 -1  <= blocks[i]->y0 + RECT_HEIGHT))){
+                    // finding what type of collision
+                    if((ball->x0+1 == blocks[i]->x0) || (ball->x0  -1 == (blocks[i]->x0 + RECT_WIDTH))){
+                        // hit on the side
+                        left = !left;
+                        right = !right;
+                        // printf("side collision x = %d  y = %d index%d\n",ball->x0, ball->y0, i);
+                        
+                    } else {
+                        // hit top or bottom
+                        up = !up;
+                        down = !down;
+                        // printf("top/bottom collision x = %d  y = %d index%d\n",ball->x0, ball->y0, i);
+                        
+                    }
+                    // printf("Collison! x = %d  y = %d index%d\n",ball->x0, ball->y0, i);
+                    blocks[i]->alive = 0x00;
+                    deadBlocks++;
+                    if(speed > MAX_SPEED){
+                        speed--;
+                    }
+                    erase_rect(blocks[i]);
+                    points += point_coef;
+                    display_points();
+                    break;
+                }
+            }
+        }
+    } else if (ball->y0 > ppad->y0 -10) {
+        // checking for paddle collision
+        if(((ball->x0 +1 >= ppad->x0) &&(ball->x0 -1 <= ppad->x0 + PAD_WIDTH)) && ((ball->y0 +1 >= ppad->y0) && ball->y0 -1 <= ppad->y0 + PAD_HEIGHT)){
+            
+            if(ball->x0 + 1 == ppad->x0){
+                left = !left;
+                right = !right;
+                ball->x0 = ppad->x0 - 1;
+                printf("1\n");
+            }
+            else if(ball->x0 -1 == ppad->x0 + PAD_WIDTH){
+                left = !left;
+                right = !right;
+                //ball->x0 = ppad->x0 + PAD_WIDTH + 1;
+                printf("2\n");
+            } else if (ball->y0 + 1 == ppad->y0){
+                up    = !up;
+                down  = !down;
+                printf("3\n");
+            } else if (ball->y0 -1  == ppad->y0 + PAD_HEIGHT){
+            
+                //ball->y0 = ppad->y0 -1;
+                up    = !up;
+                down  = !down;
+                printf("4\n");
+            } else {
+                
+                left = !left;
+                right = !right;
+                if((ball->x0-ppad->x0) < (ppad->x0 + PAD_WIDTH - ball->x0 )){
+                    ball->x0 = ppad->x0 - 4 * pad_speed;
+                } else {
+                    ball->x0 = ppad->x0 + PAD_WIDTH + 4* pad_speed;
+                }
+                
+
+            }
+        //if (ball->y0 <= ppad->y0 && )
+    }
+    //move_ball(ball);
+}
 }
 
 
@@ -358,8 +434,10 @@ int main(void){
     while(deadBlocks < blockCount)
     {
         
+        //printf("ball x%d y%d, dead%d, blocks%d\n", pball1->x0,pball1->y0, deadBlocks, blockCount);
         get_input(ppad);
-        collison_detector(pball1, blocks, ppad);
+        // collison_detector(pball1, blocks, ppad);
+        new_collision(pball1, blocks, ppad);
         delay_ms(speed);
     }
     display_background(WHITE);
