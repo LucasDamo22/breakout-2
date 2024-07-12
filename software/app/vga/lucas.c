@@ -3,7 +3,7 @@
 //#include <stdio.h>
 #define RECT_WIDTH 26 
 #define RECT_HEIGHT 8
-#define PAD_WIDTH 32
+#define PAD_WIDTH 28
 #define PAD_HEIGHT 6
 #define MAX_SPEED 12
 #define CENTER 8
